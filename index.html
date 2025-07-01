@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>TestNet Token Collector</title>
+    <!-- this is needed to make react work, DO NOT MODIFY -->
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <!-- this is needed to make tailwindcss work, DO NOT MODIFY -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Custom styles for animations -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- DO NOT MODIFY EXISTING IMPORTS BELOW - This specific combination of versions has been tested and works without dependency issues. You can add/remove imports, but do not change the versions of existing ones. -->
+    <script type="importmap" async>
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19.1.0",
+          "react-dom/client": "https://esm.sh/react-dom@19.1.0/client",
+          "react-router": "https://esm.sh/react-router@7.5.2",
+          "wagmi": "https://esm.sh/wagmi@2.15.0?deps=@tanstack/react-query@5.74.7",
+          "wagmi/actions": "https://esm.sh/wagmi@2.15.0/actions?deps=@tanstack/react-query@5.74.7",
+          "wagmi/chains": "https://esm.sh/wagmi@2.15.0/chains?deps=@tanstack/react-query@5.74.7",
+          "wagmi/connectors": "https://esm.sh/wagmi@2.15.0/connectors?deps=@tanstack/react-query@5.74.7",
+          "viem": "https://esm.sh/viem",
+          "@tanstack/react-query": "https://esm.sh/@tanstack/react-query@5.74.7"
+        }
+      }
+    </script>
+    <!-- components -->
+    <script
+      type="text/babel"
+      data-type="module"
+      src="components/Web3Provider.jsx"
+    ></script>
+    <script
+      type="text/babel"
+      data-type="module"
+      src="components/NetworkSelector.jsx"
+    ></script>
+    <script
+      type="text/babel"
+      data-type="module"
+      src="components/FaucetCard.jsx"
+    ></script>
+    <script
+      type="text/babel"
+      data-type="module"
+      src="components/BatchCollector.jsx"
+    ></script>
+    <script
+      type="text/babel"
+      data-type="module"
+      src="components/WalletManager.jsx"
+    ></script>
+    <script type="text/babel" data-type="module" src="pages/Home.jsx"></script>
+    <!-- app -->
+    <script type="text/babel" data-type="module" src="app.jsx"></script>
+  </head>
+  <body>
+    <div id="renderDiv"></div>
+  </body>
+</html>
