@@ -1,0 +1,112 @@
+/* This file for body/html/animations styling only */
+/* NEVER EVER USE THIS FILE FOR ANYTHING ELSE */
+/* ONLY use tailwindcss */
+/* NEVER use * selector */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px 0 rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px 5px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bg-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes reveal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.glass-morphism {
+  backdrop-filter: blur(10px);
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 15px 0 rgba(59, 130, 246, 0.2);
+}
+
+.animate-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: reveal 3.5s steps(40, end) 1s 1 normal both;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.bg-gradient-animate {
+  background: linear-gradient(-45deg, #3b82f6, #1d4ed8, #1e40af, #2563eb);
+  background-size: 400% 400%;
+  animation: bg-shift 15s ease infinite;
+}
+
+.network-card {
+  transition: all 0.3s ease;
+}
+
+.network-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+.faucet-status-success {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.faucet-status-error {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.faucet-status-pending {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
